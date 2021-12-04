@@ -32,7 +32,6 @@ def calculate_scores(personality_data, sart_csv_list):
     completeDataFrame = completeDataFrame.assign(Correctness = sartDataFrame['Correctness'])
 
     completeDataFrame.to_csv("../processed_data/BRED_Project_Values.csv")
-    
-    print(completeDataFrame)
+    return completeDataFrame
     
     

@@ -5,8 +5,9 @@ import pandas as pd
 def get_correlation_stats(dataFrame):
     correlation_scores = []
     colmNames = list(dataFrame)
-    relevantPersonalityDataColmNames = colmNames[4:9]
-    relevantSARTDataColmNames = colmNames[9:]
+
+    relevantPersonalityDataColmNames = colmNames[:5]
+    relevantSARTDataColmNames = colmNames[5:]
 
     correlation_scores = {}
 
