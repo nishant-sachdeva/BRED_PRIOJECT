@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def plot_stats(dataFrame, correlation_scores):
+    for key in correlation_scores:
+        print(key, correlation_scores[key])
     personality_colmns = list(dataFrame)[:5]
     sart_colmns = list(dataFrame)[5:]
 
