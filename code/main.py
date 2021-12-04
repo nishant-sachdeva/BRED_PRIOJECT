@@ -6,6 +6,6 @@ from plotting import plot_stats
 if __name__ == '__main__':
     parse()
     calculate_scores()
-    get_correlation_stats("BRED_Project_Values.xlsx")
-    plot_stats()
+    personality_data, sart_data, correlation_scores = get_correlation_stats("BRED_Project_Values.csv")
+    plot_stats(personality_data, sart_data, correlation_scores)
     print('\n================================')
