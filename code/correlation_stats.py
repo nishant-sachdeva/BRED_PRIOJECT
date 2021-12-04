@@ -2,20 +2,11 @@ import numpy as np
 import pandas as pd
 
 
-def get_correlation_stats(file_name):
+def get_correlation_stats(dataFrame):
     correlation_scores = []
-
-    path = "../processed_data/" + file_name
-
-    dataFrame = pd.read_csv(path)
-    dataFrame = dataFrame.fillna(value = np.nan)
-
     colmNames = list(dataFrame)
-    relevantPersonalityDataColmNames = colmNames[4:8]
+    relevantPersonalityDataColmNames = colmNames[4:9]
     relevantSARTDataColmNames = colmNames[9:]
-
-    relevantPersonalityData = dataFrame[relevantPersonalityDataColmNames]
-    relevantSARTData = dataFrame[relevantSARTDataColmNames]
 
     correlation_scores = {}
 
@@ -25,5 +16,4 @@ def get_correlation_stats(file_name):
             correlation_scores[personalityColm+" - "+sartColm] = dataFrame[personalityColm].corr(dataFrame[sartColm])
     
 
-    print(correlation_scores)
-    return relevantPersonalityData, relevantSARTData, correlation_scores
+    return dataFrame, correlation_scores

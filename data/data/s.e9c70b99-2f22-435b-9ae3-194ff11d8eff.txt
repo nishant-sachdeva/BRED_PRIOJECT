@@ -1,0 +1,19 @@
+version: 3.3.2
+server-time: 2021-12-04-07-21
+user_agent: mozilla/5.0 (linux; android 10; redmi note 7 pro) applewebkit/537.36 (khtml, like gecko) chrome/96.0.4664.45 mobile safari/537.36
+screen_width: 0
+screen_height: 0
+html_width: 0
+html_height: 0
+user_time: 0
+T: 0
+l: age
+stime: 2021-12-04-07-22
+T: 39845
+t: textline
+a: 50
+l: gender
+stime: 2021-12-04-07-22
+T: 4385
+t: radio
+a: 2
