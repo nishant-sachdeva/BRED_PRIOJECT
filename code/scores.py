@@ -16,14 +16,17 @@ def get_score(file_name):
 
 
 personalityAverage = []
-def get_data_descriptions(data):
-    data_desc = data.describe()
-    # print(data_desc[:3])
 
+def addMedian(data, data_desc):
     medians = [data[col].median() for col in data]
     data_desc.loc[len(data_desc.index)] = medians
     last = data_desc.index[-1]
     data_desc = data_desc.rename(index={last: 'median'})
+    return data_desc
+
+def get_data_descriptions(data):
+    data_desc = data.describe()
+    data_desc = addMedian(data, data_desc)
     print(data_desc)
     return
 
