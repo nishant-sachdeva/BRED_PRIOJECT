@@ -3,8 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def plot_stats(dataFrame, correlation_scores):
+    print("[pearsonScore, spearmanScore, kendallScore]")
     for key in correlation_scores:
         print(key, correlation_scores[key])
+    
     personality_colmns = list(dataFrame)[:5]
     sart_colmns = list(dataFrame)[5:]
 
@@ -13,6 +15,5 @@ def plot_stats(dataFrame, correlation_scores):
             dataFrame.sort_values(by=[personality_name], inplace=True)
             dataFrame.plot(x=personality_name, y=sart_name, kind='scatter')
             plt.savefig("../results/"+personality_name+sart_name+ ".png")
-            plt.show()
 
     return

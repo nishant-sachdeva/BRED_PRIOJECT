@@ -14,12 +14,18 @@ def get_score(file_name):
 
     return average_resoponse_time, average_correctness
 
-    
+
+personalityAverage = []
+def get_personality_averages(personality_data):
+    data_desc = personality_data.describe()
+    print(data_desc)
+    return
 
 def calculate_scores(personality_data, sart_csv_list):
     #  we have the personality data, sart_csv_list 
     # personality data => pandas dataframe
     # sart csv list => simple list of all files
+    get_personality_averages(personality_data)
     sart_scores = []
     for file_name in sart_csv_list:
         correctness, response_time = get_score(file_name)
